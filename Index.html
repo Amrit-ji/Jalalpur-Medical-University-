@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    /* CSS Code */
+    html {
+   background: linear-gradient(to right, dodgerblue 0%, deepskyblue 100%);
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f7fa; /* Light grey background */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+header {
+  background: linear-gradient(135deg, #1abc9c, #2a3d66); /* Gradient background */
+  color: white;
+  text-align: center;
+  padding: 80px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #444;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1abc9c;
+}
+
+/* Main Banner Section */
+.banner {
+  background: linear-gradient(135deg, rgba(26, 188, 156, 0.8), rgba(42, 61, 102, 0.8)), url('https://via.placeholder.com/1600x900'); /* Gradient with a background image */
+  color: white;
+  text-align: center;
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner h2 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.banner .btn {
+  background-color: #fff;
+  color: #1abc9c;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner .btn:hover {
+  background-color: #1abc9c;
+  color: white;
+}
+
+/* Contact Info Section */
+.contact-info {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.contact-info .contact-item {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info .contact-item p {
+  margin-bottom: 10px;
+}
+
+.contact-info .contact-item a {
+  color: #2a3d66;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info .contact-item a:hover {
+  color: #1abc9c;
+}
+
+/* Contact Form Section */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  text-align: left;
+}
+
+.contact-form h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.contact-form button {
+  background-color: #1abc9c;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2a3d66;
+}
+
+/* Footer */
+footer {
+  background-color: #2a3d66;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+/* About Section */
+.about {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #2a3d66;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.about h3 {
+  font-size: 2rem;
+  color: #1abc9c;
+  margin-bottom: 15px;
+}
+
+.about ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.about ul li strong {
+  color: #2a3d66;
+}
+
+.about a {
+  text-decoration: none;
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+.about a:hover {
+  color: #2a3d66;
+}
+/* Electropathy Section */
+.Electropathy {
+  padding: 60px 0;
+  background-color: #fff;
+  text-align: ;
+}
+
+.BEMS h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #2a3d66;
+}
+
+.DEMS p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.MD h3 {
+  font-size: 2rem;
+  color: #1abc9c;
+  margin-bottom: 15px;
+}
+
+. Certificate ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.Pharmacy ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+  </style>
+</head>
+<body>
+
+
+<html>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jalalpur Medical University</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>O.A.E.H Medical College</h1>
+      <p>Jalalpur Medical University</p>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="admission.html">admission</a></li>
+        <li><a href="courses.html">courses</a></li>
+         <li><a href="image.html">image</a></li>
+        <li><a href="details.html">details</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+     
+
+  <!-- Main Banner Section with Gradient Background -->
+  <section class="banner">
+    <div class="container">
+      <h2>Welcome to Jalalpur Medical University</h2>
+      <p>Your future in Madical starts here</p>
+      <a href="admission.html" class="btn">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- About section -->
+<section class="about">
+  <div class="container">
+    <h2>About Jalalpur Medical University</h2>
+    <p>Welcome to Jalalpur Medical University, where we are shaping the future of healthcare with cutting-edge medical programs and a strong focus on holistic, sustainable health practices. Our vision is to empower students with the knowledge and skills necessary to thrive in the evolving world of medicine, particularly in the emerging fields of **Electropathy** and **Homeopathy**.</p>
+
+    <h3>Our Vision</h3>
+    <p>Our mission is to create healthcare leaders who understand the future of medicine, blending modern science with alternative therapies like Electropathy and Homeopathy. We aim to promote personalized and patient-centered care while advancing research and education in these unique fields. We believe in empowering the next generation of doctors to become pioneers in integrated medicine, combining traditional and modern approaches to improve patient outcomes.</p>
+
+    <h3>Electropathy: A Step into the Future of Medicine</h3>
+    <p>Electropathy is an innovative, science-backed field that uses electrical currents to stimulate healing in the body. At Jalalpur Medical University, we offer specialized courses in Electropathy, training students to harness the power of bioelectrical signals for non-invasive treatments. This technique has a huge potential in treating chronic illnesses, pain management, and promoting overall wellness.</p>
+
+    <h3>Homeopathy: The Healing Art of Natural Medicine</h3>
+    <p>Homeopathy is a well-established, holistic approach to healthcare that treats the individual as a whole, considering physical, emotional, and mental health. We offer a comprehensive curriculum in Homeopathy, providing students with deep insights into this therapeutic approach. Our program blends theoretical knowledge with practical experience, ensuring that graduates are ready to treat patients holistically and effectively.</p>
+
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li><strong>State-of-the-art Facilities:</strong> Our medical college is equipped with modern classrooms, laboratories, and research centers dedicated to Electropathy, Homeopathy, and other alternative therapies.</li>
+      <li><strong>Expert Faculty:</strong> We have a team of highly qualified faculty members with expertise in Electropathy, Homeopathy, and other branches of medicine, ensuring that students receive the best possible education.</li>
+      <li><strong>Global Perspective:</strong> Our curriculum is designed to give students a global perspective on healthcare, preparing them for careers that transcend traditional boundaries and embrace future-forward practices.</li>
+      <li><strong>Research and Innovation:</strong> We actively encourage research in alternative medicine and healthcare solutions, fostering innovation in the fields of Electropathy and Homeopathy.</li>
+    </ul>
+
+    <h3>Join Us in Shaping the Future of Medicine</h3>
+    <p>At Jalalpur Medical University, we are dedicated to providing students with the tools, knowledge, and experience they need to become leaders in the medical field. Whether you’re interested in pursuing a career in Electropathy, Homeopathy, or traditional medicine, we provide the educational foundation to help you succeed in a rapidly changing world.</p>
+    <p>Enroll today and take the first step towards a rewarding future in healthcare!</p>
+  </div>
+</section>
+  
+   <!--Student eligibility -->
+     <section class="Electropathy Courses">
+    <div class="container">
+      <h2>Electropathy courses eligibility </h2>
+
+
+ 1. BEMS (Bachelor of Electropathy Medicine and Surgery)
+
+<p></p>Duration: 4.5 years (3.5 years academics + 1 year internship).
+
+Eligibility: 10+2 with PCB (Physics, Chemistry, Biology).
+
+Content: Anatomy, Physiology, Pathology, Herbal Medicine, Electro-Herbal Treatment.
+
+Scope: Private practice as an Electropathy consultant, herbal product developer.
+
+
+
+<p></p>2. DEMS (Diploma in Electropathy Medicine and Surgery)
+
+<p></p>Duration: 1-2 years.
+
+Eligibility: 10th ya 12th pass.
+
+Content: Basic knowledge of herbal and electro-magnetic remedies.
+
+Scope: Assistant roles in alternative medicine clinics or self-practice.
+
+
+
+<p></p>3. MD (Doctor of Medicine in Electropathy)
+
+<p></p>Duration: 2-3 years.
+
+Eligibility: BEMS ya equivalent degree.
+
+Content: Advanced herbal treatment techniques, research in alternative therapies.
+
+Scope: Specialist in Electropathy, research, and teaching.
+
+
+
+<p></p>4. Certificate Courses in Electropathy
+
+<p></p>Duration: 6 months to 1 year.
+
+Eligibility: 10th or 12th pass (varies by institute).
+
+Content: Basic herbal and electro-homeopathic remedies.
+
+Scope: Basic-level herbal practitioner or product consultant.
+
+
+
+<p></p>5. Electropathy Pharmacy Courses
+
+<p></p>Duration: 1-2 years (Diploma or Certificate).
+
+Eligibility: 10+2 with PCB.
+
+Content: Manufacturing, dispensing, and usage of herbal medicines.
+
+Scope: Work in herbal pharmaceutical companies or start your own business.
+  </div>
+</section>
+
+  <!-- Contact Information Section -->
+  <section class="contact-info">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-item">
+        <p><strong>Phone:</strong> +919934781423</p>
+        <p><strong>Email:</strong> <a href="mailto:omamrithealthcare@gmail.com">omamrithealthcare@gmail.com</a></p>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3>Get in Touch</h3>
+        <form action="submit_contact_form.php" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message" rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jalalpur Medical University. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
